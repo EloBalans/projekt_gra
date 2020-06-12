@@ -10,7 +10,7 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				
+                           
 
 
 				<!-- Main -->
@@ -19,6 +19,13 @@
 							{block name=content} Domyślna treść zawartości .... {/block}
 						</div>
 					</div>
+                         
+
+                                        
+
+                                       
+
+                                             
 
 				<!-- Footer -->
 					<footer id="footer">
