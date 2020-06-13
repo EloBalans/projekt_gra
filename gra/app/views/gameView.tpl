@@ -7,41 +7,47 @@
         
     </div>
         <div style="margin: 25px 87%">
-       <a href="{$conf->action_root}ranking" class="button primary">Ranking</a>
+       <a href="{$conf->action_root}rankingload" class="button primary">Ranking</a>
        </div>   
     
     <header>
         <ul class="actions fit">
 										
 									</ul>
+        
+  
+
+
+    <table>
+            <tbody>
+                    <tr>
+                            <td>Nick - {$player["nick"]}</td>
+                    </tr>
+                    <tr>
+                            <td>Poziom - {$player["lvl"]}</td>
+                    </tr>
+                    <tr>
+                            <td>Doświadczenie - {$player["exp"]}</td>
+                    </tr>
+                    <tr>
+                            <td>Złoto - {$player["gold"]}</td>
+                    </tr>
+                    <tr>
+                            <td>Punkty życia - {$player["hp"]}</td>
+                    </tr>
+                    <tr>
+                            <td>Punkty ataku - {$player["attack"]}</td>
+                    </tr>
+
+            </tbody>
+    </table>
+
+
+   
       
-            <div class="table-wrapper">
-               
-                <table>
-                        
-                        <tbody>
-                                <tr>
-                                        <td>Punkty życia</td>
-                                        
-
-                                </tr>
-                                <tr>
-                                        <td>Item Two</td>
-                                       
-                                </tr>
-                                <tr>
-                                        <td>Item Three</td>
-                                      
-                                </tr>
-                               
-                        </tbody>
-                </table>
-
-                
-                
-            </div>
+            
     
-         </ul>
+        
        
 
     </header>
@@ -82,6 +88,21 @@
             </article>
 
     </section>
+ 
+                    
+     <div style="margin: 25px 87%">
+        {if $msgs->isMessage()}
+                <div class="messages bottom-margin">
+                        <ul>
+                        {foreach $msgs->getMessages() as $msg}
+                        {strip}
+                                <li class="msg {if $msg->isError()}error{/if} {if $msg->isWarning()}warning{/if} {if $msg->isInfo()}info{/if}">{$msg->text}</li>
+                        {/strip}
+                        {/foreach}
+                        </ul>
+                </div>
+        {/if}
 
+     </div>
     
 {/block}

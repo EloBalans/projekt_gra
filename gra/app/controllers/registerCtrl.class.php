@@ -28,7 +28,7 @@ class registerCtrl
         $this->form->nick = ParamUtils::getFromRequest('nick', true, 'Błędne wywołanie aplikacji');
         $this->form->login = ParamUtils::getFromRequest('login', true, 'Błędne wywołanie aplikacji');
         $this->form->password = ParamUtils::getFromRequest('password', true, 'Błędne wywołanie aplikacji');
-         
+       
         
             
     }
@@ -84,8 +84,8 @@ class registerCtrl
         try{
             App::getDB()->insert("user",[
                 'login' => $this->form->login,
-                'nick' => $this->form->login,
-                'password' => $this->form->password,
+                'nick' => $this->form->nick,
+                'password' => md5($this->form->password),
                 'email' => $this->form->email,
                 'rola' => 'user'
             ]);
@@ -115,7 +115,7 @@ class registerCtrl
             }
             
             if($nickCount){
-                Utils::addErrorMessage("Podany email jest już zajęty");
+                Utils::addErrorMessage("Podany nick jest już zajęty");
             }
 
             if($emailCount){

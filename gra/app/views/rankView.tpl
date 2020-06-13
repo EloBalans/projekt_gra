@@ -6,6 +6,12 @@
         <a href="{$conf->action_root}gameView" class="button primary">Back</a>
     </div>
 
+    <div class="bottom-margin">
+
+</div>	
+    
+   
+    
 <h3>Ranking</h3>
     <div class="table-wrapper">
             <table class="alt">
@@ -18,36 +24,16 @@
                             </tr>
                     </thead>
                     <tbody>
-                            <tr>
-                                    <td>Gracz1</td>
-                                    <td>id_gracz</td>
-                                    <td>lvl</td>
-                                    <td>usun</td>
-                            </tr>
-                            <tr>
-                                    <td>Gracz2</td>
-                                    <td>id_gracz</td>
-                                    <td>lvl</td>
-                                    <td>usun</td>
-                            </tr>
-                            <tr>
-                                    <td>Gracz3</td>
-                                    <td>id_gracz</td>
-                                    <td>lvl</td>
-                                    <td>usun</td>
-                            </tr>
-                            <tr>
-                                    <td>Gracz4</td>
-                                    <td>id_gracz</td>
-                                    <td>lvl</td>
-                                    <td>usun</td>
-                            </tr>
-                            <tr>
-                                    <td>Gracz5</td>
-                                    <td>id_gracz</td>
-                                    <td>lvl</td>
-                                    <td>usun</td>
-                            </tr>
+                            {foreach $players as $p}
+                                {strip}
+                                        <tr>
+                                                <td>{$p["nick"]}</td>
+                                                <td>{$p["iduser"]}</td>
+                                                <td>{$p["lvl"]}</td>
+                                                
+                                        </tr>
+                                {/strip}
+                            {/foreach}
                     </tbody>
             </table>
     </div>

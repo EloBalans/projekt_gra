@@ -9,10 +9,12 @@ use core\RoleUtils;
 use core\Utils;
 use core\SessionUtils;
 use core\Validator;
+use core\Message;
 
 class loginCtrl
 {
     public $form;
+    private $accountData;
     
   
     public function __construct(){
@@ -25,11 +27,10 @@ class loginCtrl
     public function validatelogin() {
       
 
-        if(!empty(SessionUtils::load("id", true))) return true;
-
         if(!$this->form->checkIsNull()) return false;
 
         $v = new Validator();
+        
         $v->validate($this->form->login,[
             'trim' => true,
             'required' => true,
@@ -44,20 +45,23 @@ class loginCtrl
             'required_message' => 'Hasło jest wymagane',
         ]);
 
-        if(App::getMessages()->isError()) return false;
+        if(App::getMessages()->isError()) {
+            return false;
+        }
 
         try{
+           
+            
             $this->accountData = App::getDB()->get("user", [
-                "[>]role" => ["id_role" => "id_role"],
-            ],[
-                'user.id',
-                'user.login',
-                'user.password',
-                'role.name',
+                'login',
+                'password',
+                'rola',
             ],[
                 'login' => $this->form->login,
-                'password' => md5($this->form->password)
+                'password' => md5($this->form->password),
             ]);
+            
+            
 
             if(empty($this->accountData)){
                 Utils::addErrorMessage("Nieprawidłowy login lub hasło");
@@ -66,35 +70,23 @@ class loginCtrl
             Utils::addErrorMessage("Błąd połączenia z bazą danych");
         }
 
-        if(!App::getMessages()->isError()) return true;
-        else return false;
+        if(!App::getMessages()->isError()) {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     
     public function generateView(){
-        if($this->validateLogin()){
-            SessionUtils::store("id", $this->accountData["id"]);
-            SessionUtils::store("login", $this->accountData["login"]);
-          
-
-            
-
-            RoleUtils::addRole($this->accountData["name"]);
-            RoleUtils::addRole("logged");
-            Utils::addInfoMessage("Logowanie udane!");
-
-          
-        }
-        else{
-            App::getSmarty()->assign('page_title','Zaloguj się');
-            App::getSmarty()->assign('page_description','Logowanie do systemu');
-            App::getSmarty()->display('loginView.tpl');
-        }
+        App::getSmarty()->assign('form', $this->form); 
+        App::getSmarty()->display('LoginView.tpl');
     }
     
     
     public function action_loginview() {
-         ;
+         
          $this->generateView();
        
     }
@@ -102,14 +94,27 @@ class loginCtrl
 
     public function action_login() {
          $this->getLoginParams();
-         $this->generateView();
+        if ($this->validatelogin()) {
+            RoleUtils::addRole($this->accountData['rola']); 
+            SessionUtils::store("login", $this->accountData['login']);
+            SessionUtils::store("rola", $this->accountData['rola']);
+            header("Location: ".App::getConf()->app_url."/gameview");
+        } 
+        else {
+            $this->generateView();
+        }
        
     }
 
     public function action_logout() {
-        // 1. zakończenie sesji
+        RoleUtils::removeRole("logged");
+        RoleUtils::removeRole(SessionUtils::load("rola"));
+        SessionUtils::remove("iduser");
+        SessionUtils::remove("login");
+        SessionUtils::remove("rola");
+       
         session_destroy();
-        // 2. idź na stronę główną - system automatycznie przekieruje do strony logowania
+        
         App::getRouter()->redirectTo('loginshow');
     }
    

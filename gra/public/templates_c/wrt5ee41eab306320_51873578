@@ -1,0 +1,132 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-06-13 02:32:43
+  from 'C:\xampp\htdocs\gra\app\views\gameView.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5ee41eab3031a3_55846400',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9475ed89e8fea3bfa36fce25637bd2e9b092a1b1' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\gra\\app\\views\\gameView.tpl',
+      1 => 1592008361,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5ee41eab3031a3_55846400 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, true);
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10711826985ee41eab2f5f76_32190671', 'content');
+$_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
+}
+/* {block 'content'} */
+class Block_10711826985ee41eab2f5f76_32190671 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'content' => 
+  array (
+    0 => 'Block_10711826985ee41eab2f5f76_32190671',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+    <div style="margin: 25px 87%">
+        
+        <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+logout" class="button primary">Wyloguj</a>
+    
+        
+    </div>
+        <div style="margin: 25px 87%">
+       <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+ranking" class="button primary">Ranking</a>
+       </div>   
+    
+    <header>
+        <ul class="actions fit">
+										
+									</ul>
+        
+  <span style="margin: 0px 30%">       
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['players']->value, 'p');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['p']->value) {
+?>
+<table><tbody><tr><td>Nick - <?php echo $_smarty_tpl->tpl_vars['p']->value["nick"];?>
+</td></tr><tr><td>Poziom - <?php echo $_smarty_tpl->tpl_vars['p']->value["lvl"];?>
+</td></tr><tr><td>Doświadczenie - <?php echo $_smarty_tpl->tpl_vars['p']->value["exp"];?>
+</td></tr><tr><td>Złoto - <?php echo $_smarty_tpl->tpl_vars['p']->value["gold"];?>
+</td></tr><tr><td>Punkty życia - <?php echo $_smarty_tpl->tpl_vars['p']->value["hp"];?>
+</td></tr><tr><td>Punkty ataku - <?php echo $_smarty_tpl->tpl_vars['p']->value["attack"];?>
+</td></tr></tbody></table>
+<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+</span>    
+      
+            
+    
+        
+       
+
+    </header>
+    
+    <section class="tiles">
+            <article class="style10">
+                    <span class="image">
+                            <img src="images/forest.png" alt="" />
+                    </span>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+location">
+                            <h2>Las</h2>
+                            <div class="content">
+                                    <p>Tutaj znajdują się potwory od 1 lvl do 5 lvl</p>	
+                            </div>
+                    </a>
+            </article>
+            <article class="style10">
+                    <span class="image">
+                            <img src="images/pustynia.png" alt="" />
+                    </span>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+location">
+                            <h2>Pustynia</h2>
+                            <div class="content">
+                                    <p>Tutaj znajdują się potwory od 6 lvl do 10 lvl</p>
+                            </div>
+                    </a>
+            </article>
+            <article class="style10">
+                    <span class="image">
+                            <img src="images/bagno.png" alt="" />
+                    </span>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+location">
+                            <h2>Bagna</h2>
+                            <div class="content">
+                                    <p>Tutaj znajdują się potwory od 11 lvl do 15 lvl</p>
+                            </div>
+                    </a>
+            </article>
+
+    </section>
+
+    
+<?php
+}
+}
+/* {/block 'content'} */
+}

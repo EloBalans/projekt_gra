@@ -12,8 +12,12 @@ Utils::addRoute('logout', 'loginCtrl');
 Utils::addRoute('register', 'registerCtrl');
 Utils::addRoute('registershow', 'registerCtrl');
 Utils::addRoute('gameview', 'gameCtrl',['user','admin']);
-Utils::addRoute('ranking', 'rankCtrl');
+Utils::addRoute('rankingload', 'rankingCtrl');
 Utils::addRoute('location', 'locationCtrl',['user','admin']);
+
+
+
+
 
 
 
