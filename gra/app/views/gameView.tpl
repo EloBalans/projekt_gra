@@ -13,37 +13,26 @@
     <header>
         <ul class="actions fit">
 										
-									</ul>
-        
-  
-
-
-    <table>
-            <tbody>
-                    <tr>
-                            <td>Nick - {$player["nick"]}</td>
-                    </tr>
-                    <tr>
-                            <td>Poziom - {$player["lvl"]}</td>
-                    </tr>
-                    <tr>
-                            <td>Doświadczenie - {$player["exp"]}</td>
-                    </tr>
-                    <tr>
-                            <td>Złoto - {$player["gold"]}</td>
-                    </tr>
-                    <tr>
-                            <td>Punkty życia - {$player["hp"]}</td>
-                    </tr>
-                    <tr>
-                            <td>Punkty ataku - {$player["attack"]}</td>
-                    </tr>
-
-            </tbody>
-    </table>
-
-
-   
+	</ul>
+<div class="table-wrapper">      
+<table class="alt">  
+    
+	<tbody>	
+            <tr>
+     <td>
+        <p><div class="image left"><img src="images/pic02.jpg"  alt="" /></div> 
+        <h1>{$player["nick"]}</h1> 
+        Poziom: {$player["lvl"]} <br/> 
+        Doświadczenie:  {$player["exp"]}<br/> 
+        Złoto: {$player["gold"]}<br/> 
+        Punkty życia: {$player["hp"]}<br/>
+        Punkty ataku: {$player["attack"]} <br/> </p>
+   </td>
+    
+   	</tr>
+</tbody>
+</table>
+</div>   
       
             
     

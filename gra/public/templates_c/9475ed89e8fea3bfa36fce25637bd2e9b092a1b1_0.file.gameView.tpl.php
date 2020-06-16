@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-13 21:27:12
+/* Smarty version 3.1.34-dev-7, created on 2020-06-14 23:21:41
   from 'C:\xampp\htdocs\gra\app\views\gameView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ee52890d2da91_98422651',
+  'unifunc' => 'content_5ee694e56000b8_25249890',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9475ed89e8fea3bfa36fce25637bd2e9b092a1b1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\gra\\app\\views\\gameView.tpl',
-      1 => 1592076428,
+      1 => 1592168348,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ee52890d2da91_98422651 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ee694e56000b8_25249890 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3578264465ee52890d1ba73_31255509', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10512116735ee694e54de4a9_85141015', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_3578264465ee52890d1ba73_31255509 extends Smarty_Internal_Block
+class Block_10512116735ee694e54de4a9_85141015 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_3578264465ee52890d1ba73_31255509',
+    0 => 'Block_10512116735ee694e54de4a9_85141015',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,43 +56,32 @@ rankingload" class="button primary">Ranking</a>
     <header>
         <ul class="actions fit">
 										
-									</ul>
-        
-  
-
-
-    <table>
-            <tbody>
-                    <tr>
-                            <td>Nick - <?php echo $_smarty_tpl->tpl_vars['player']->value["nick"];?>
-</td>
-                    </tr>
-                    <tr>
-                            <td>Poziom - <?php echo $_smarty_tpl->tpl_vars['player']->value["lvl"];?>
-</td>
-                    </tr>
-                    <tr>
-                            <td>Doświadczenie - <?php echo $_smarty_tpl->tpl_vars['player']->value["exp"];?>
-</td>
-                    </tr>
-                    <tr>
-                            <td>Złoto - <?php echo $_smarty_tpl->tpl_vars['player']->value["gold"];?>
-</td>
-                    </tr>
-                    <tr>
-                            <td>Punkty życia - <?php echo $_smarty_tpl->tpl_vars['player']->value["hp"];?>
-</td>
-                    </tr>
-                    <tr>
-                            <td>Punkty ataku - <?php echo $_smarty_tpl->tpl_vars['player']->value["attack"];?>
-</td>
-                    </tr>
-
-            </tbody>
-    </table>
-
-
-   
+	</ul>
+<div class="table-wrapper">      
+<table class="alt">  
+    
+	<tbody>	
+            <tr>
+     <td>
+        <p><div class="image left"><img src="images/pic02.jpg"  alt="" /></div> 
+        <h1><?php echo $_smarty_tpl->tpl_vars['player']->value["nick"];?>
+</h1> 
+        Poziom: <?php echo $_smarty_tpl->tpl_vars['player']->value["lvl"];?>
+ <br/> 
+        Doświadczenie:  <?php echo $_smarty_tpl->tpl_vars['player']->value["exp"];?>
+<br/> 
+        Złoto: <?php echo $_smarty_tpl->tpl_vars['player']->value["gold"];?>
+<br/> 
+        Punkty życia: <?php echo $_smarty_tpl->tpl_vars['player']->value["hp"];?>
+<br/>
+        Punkty ataku: <?php echo $_smarty_tpl->tpl_vars['player']->value["attack"];?>
+ <br/> </p>
+   </td>
+    
+   	</tr>
+</tbody>
+</table>
+</div>   
       
             
     

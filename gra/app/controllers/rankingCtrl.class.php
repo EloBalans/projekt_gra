@@ -24,9 +24,11 @@ class rankingCtrl {
                 "nick",
                 "iduser",
                 "lvl",
-                
                 ],[
-                "lvl[>]" => "ASC",
+                "ORDER" => ["lvl" => "DESC"],
+                "LIMIT" => 20   ,
+             
+                
         ]);
         } catch (\PDOException $e) {
             Utils::addErrorMessage('Wystąpił błąd podczas pobierania rekordów');

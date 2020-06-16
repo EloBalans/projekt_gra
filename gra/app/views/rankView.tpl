@@ -13,7 +13,7 @@
    
     
 <h3>Ranking</h3>
-    <div class="table-wrapper">
+    <div class="table-wrapper" >
             <table class="alt">
                     <thead>
                             <tr>

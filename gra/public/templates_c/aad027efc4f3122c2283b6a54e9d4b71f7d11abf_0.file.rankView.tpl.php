@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-13 15:25:58
+/* Smarty version 3.1.34-dev-7, created on 2020-06-14 01:56:56
   from 'C:\xampp\htdocs\gra\app\views\rankView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ee4d3e6668444_24604212',
+  'unifunc' => 'content_5ee567c81371f7_88509295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aad027efc4f3122c2283b6a54e9d4b71f7d11abf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\gra\\app\\views\\rankView.tpl',
-      1 => 1592054003,
+      1 => 1592092615,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ee4d3e6668444_24604212 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ee567c81371f7_88509295 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,16 +28,16 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19695454645ee4d3e663b9b4_33930323', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3440406235ee567c812ccf6_77367441', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_19695454645ee4d3e663b9b4_33930323 extends Smarty_Internal_Block
+class Block_3440406235ee567c812ccf6_77367441 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_19695454645ee4d3e663b9b4_33930323',
+    0 => 'Block_3440406235ee567c812ccf6_77367441',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -55,7 +55,7 @@ gameView" class="button primary">Back</a>
    
     
 <h3>Ranking</h3>
-    <div class="table-wrapper">
+    <div class="table-wrapper" >
             <table class="alt">
                     <thead>
                             <tr>

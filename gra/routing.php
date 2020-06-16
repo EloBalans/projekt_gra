@@ -14,6 +14,8 @@ Utils::addRoute('registershow', 'registerCtrl');
 Utils::addRoute('gameview', 'gameCtrl',['user','admin']);
 Utils::addRoute('rankingload', 'rankingCtrl');
 Utils::addRoute('location', 'locationCtrl',['user','admin']);
+Utils::addRoute('locationfight', 'locationfightCtrl',['user','admin']);
+
 
 
 

@@ -17,7 +17,10 @@ class gameCtrl {
     
     public $login;    
     public $accountData; 
+    public $monsterData;
+    public $idmonster;
     
+     
      public function validate() {
         $exists = App::getDB()->count("user","login",[
            'login' => $this->login 
@@ -55,8 +58,12 @@ class gameCtrl {
     }
     
     
+    
+    
+    
      public function generateView(){
         $this->accountData = $this->getUserDB($this->login);
+        SessionUtils::store($this->idmonster, rand(1,5));
         App::getSmarty()->assign("player", $this->accountData);
         App::getSmarty()->display('gameView.tpl');
     }

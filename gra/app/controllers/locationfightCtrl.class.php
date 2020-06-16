@@ -15,13 +15,14 @@ use core\Message;
 
 
 
-class locationCtrl {
+class locationfightCtrl {
     
     
     public $login;    
-    public $accountData; 
+    public $accountData;
     public $monsterData;
-    private $idmonster;
+    public $fightData;
+    public $idmonster;
     
      public function validate() {
         $exists = App::getDB()->count("user","login",[
@@ -42,12 +43,12 @@ class locationCtrl {
         try{
             $user = App::getDB()->get("user", 
             [
-                'nick',
-                'lvl',
-                'exp',
-                'gold',
-                'hp',
-                'attack',
+                'user.nick',
+                'user.lvl',
+                'user.exp',
+                'user.gold',
+                'user.hp',
+                'user.attack',
             ],[
                 'login' => $login
             ]);
@@ -58,30 +59,35 @@ class locationCtrl {
 
         return $user;
     }
+    
      public function getMonsterDB(){
         $monster = null;
 
         try{
             $monster = App::getDB()->get("monster", 
             [
-                'name',
-                'lvl',
-                'hp',
-                'attack',
-                'gold', 
-                'exp'
+                'monster.name',
+                'monster.lvl',
+                'monster.hp',
+                'monster.attack',
+                'monster.gold',
+                'monster.exp'
                 ],[
-                'idmonster' => $this->idmonster,
+                'monster.idmonster' => $this->idmonster,
             ]);
-
-
+           
+            
         }catch(\PDOException $e){
             Utils::addErrorMessage("Błąd połączenia z bazą danych!");
         }
 
         return $monster;
-
+       
     }
+    
+    
+    
+    
     
      public function generateView(){
         $this->idmonster = SessionUtils::load($this->idmonster, $keep = true);
@@ -89,11 +95,14 @@ class locationCtrl {
         $this->monsterData = $this->getMonsterDB();
         
         App::getSmarty()->assign("player", $this->accountData);
-        App::getSmarty()->assign("monster", $this->monsterData);
-        App::getSmarty()->display('locationView.tpl');
+        App::getSmarty()->assign("monster", $this->monsterData); 
+        App::getSmarty()->display('locationfightView.tpl');
+        
+        
+        
+       
     }
-    
-    public function action_location() {
+     public function loginn() {
          if (empty($this->login)){
             $this->login = SessionUtils::load("login", $keep = true);
         }
@@ -101,9 +110,17 @@ class locationCtrl {
         if(!$this->validate()){
             $this->login = SessionUtils::load("login", $keep = true);
         }
+         
+         
+     }
+    public function action_locationfight() {
         
+        $this->loginn();
         $this->generateView();
     }
+    
+  
+     
     
 
 }
