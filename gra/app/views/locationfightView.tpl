@@ -38,6 +38,24 @@
         </tbody>
     </table>
 </div>  
+                    
+                    
+<div class="table-wrapper">
+    <table class="alt">
+            
+            <tbody>
+                    <tr>
+                            <td>HP: {$player["hp"]}</td>
+                            <td>AT: {$player["attack"]}</td>
+                            <td><center>----------------------------------WALKA----------------------------------</center></td>
+                            <td>HP: {$monster["hp"]}</td>
+                            <td>AT: {$monster["attack"]}</td>
+                    </tr>
+                    
+                    
+            </body>       
+    </table>
+</div>
                       
                       
 {if $msgs->isMessage()}
@@ -52,9 +70,12 @@
     </div>
 {/if}                                                            
 
-<div style="margin: 25px 40%">
+<div style="margin: 25px 43%">
     <h1> Wygrana! </h1>
-    <a href="{$conf->action_root}gameView" class="button primary">Dalej</a>
+    </div>
+<div style="margin: 25px 47%">
+    
+    <a href="{$conf->action_root}looplocation" class="button primary">Dalej</a>
 </div>
     
 {/block} 

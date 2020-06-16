@@ -18,7 +18,11 @@ class gameCtrl {
     public $login;    
     public $accountData; 
     public $monsterData;
+    public $idmonsterloc1;
+    public $idmonsterloc2;
+    public $idmonsterloc3;
     public $idmonster;
+    public $idmap;
     
      
      public function validate() {
@@ -63,9 +67,27 @@ class gameCtrl {
     
      public function generateView(){
         $this->accountData = $this->getUserDB($this->login);
-        SessionUtils::store($this->idmonster, rand(1,5));
         App::getSmarty()->assign("player", $this->accountData);
         App::getSmarty()->display('gameView.tpl');
+        
+    }
+    public function action_map1() {
+       SessionUtils::store($this->idmonster, rand(1,5), $keep = true);
+       SessionUtils::store('location', "Las", $keep = true);
+       App::getRouter()->redirectTo('location');
+        
+    }
+    public function action_map2() {
+        SessionUtils::store($this->idmonster, rand(6,10), $keep = true); 
+        SessionUtils::store('location', "Pustynia", $keep = true);
+        App::getRouter()->redirectTo('location');
+        
+    }
+    public function action_map3() {
+        SessionUtils::store($this->idmonster, rand(11,15), $keep = true);
+        SessionUtils::store('location', "Bagna", $keep = true);
+        App::getRouter()->redirectTo('location');
+        
     }
     
     public function action_gameview() {
@@ -80,6 +102,8 @@ class gameCtrl {
        
         $this->generateView();
     }
+    
+    
     
     
 }

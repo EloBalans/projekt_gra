@@ -46,7 +46,7 @@
                     <span class="image">
                             <img src="images/forest.png" alt="" />
                     </span>
-                    <a href="{$conf->action_root}location">
+                    <a href="{$conf->action_root}map1">
                             <h2>Las</h2>
                             <div class="content">
                                     <p>Tutaj znajdują się potwory od 1 lvl do 5 lvl</p>	
@@ -57,7 +57,7 @@
                     <span class="image">
                             <img src="images/pustynia.png" alt="" />
                     </span>
-                    <a href="{$conf->action_root}location">
+                    <a href="{$conf->action_root}map2">
                             <h2>Pustynia</h2>
                             <div class="content">
                                     <p>Tutaj znajdują się potwory od 6 lvl do 10 lvl</p>
@@ -68,7 +68,7 @@
                     <span class="image">
                             <img src="images/bagno.png" alt="" />
                     </span>
-                    <a href="{$conf->action_root}location">
+                    <a href="{$conf->action_root}map3">
                             <h2>Bagna</h2>
                             <div class="content">
                                     <p>Tutaj znajdują się potwory od 11 lvl do 15 lvl</p>

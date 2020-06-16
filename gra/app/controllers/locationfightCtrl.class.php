@@ -23,6 +23,8 @@ class locationfightCtrl {
     public $monsterData;
     public $fightData;
     public $idmonster;
+    public $location;
+    
     
      public function validate() {
         $exists = App::getDB()->count("user","login",[
@@ -93,15 +95,16 @@ class locationfightCtrl {
         $this->idmonster = SessionUtils::load($this->idmonster, $keep = true);
         $this->accountData = $this->getUserDB($this->login);
         $this->monsterData = $this->getMonsterDB();
-        
+      //  $this->fight= $this->getfight($this->$accountData, $this->$monsterData);
         App::getSmarty()->assign("player", $this->accountData);
         App::getSmarty()->assign("monster", $this->monsterData); 
         App::getSmarty()->display('locationfightView.tpl');
+     }
         
         
         
        
-    }
+    
      public function loginn() {
          if (empty($this->login)){
             $this->login = SessionUtils::load("login", $keep = true);
@@ -119,7 +122,35 @@ class locationfightCtrl {
         $this->generateView();
     }
     
+    
+//    public function getfight($accountData,$monsterData){
+//        
+//    }
+    
   
+  
+    public function action_looplocation() {
+        
+        $this->location = SessionUtils::load('location', $keep = true);
+          
+        
+        if(($this->location)=="Las"){
+            SessionUtils::remove($this->idmonster);
+            SessionUtils::store($this->idmonster, rand(1,5));
+            App::getRouter()->redirectTo('location');
+        }
+        if(($this->location)=="Pustynia"){
+            SessionUtils::remove($this->idmonster);
+            SessionUtils::store($this->idmonster, rand(6,10));
+            App::getRouter()->redirectTo('location');
+        }
+        if(($this->location)=="Bagna"){
+            SessionUtils::remove($this->idmonster);
+            SessionUtils::store($this->idmonster, rand(11,15));
+            App::getRouter()->redirectTo('location');
+        }
+        
+    }
      
     
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-14 23:21:41
+/* Smarty version 3.1.34-dev-7, created on 2020-06-16 16:03:19
   from 'C:\xampp\htdocs\gra\app\views\gameView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ee694e56000b8_25249890',
+  'unifunc' => 'content_5ee8d12763f306_65562686',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9475ed89e8fea3bfa36fce25637bd2e9b092a1b1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\gra\\app\\views\\gameView.tpl',
-      1 => 1592168348,
+      1 => 1592316195,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ee694e56000b8_25249890 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ee8d12763f306_65562686 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10512116735ee694e54de4a9_85141015', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2235654895ee8d12762dde6_32589080', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_10512116735ee694e54de4a9_85141015 extends Smarty_Internal_Block
+class Block_2235654895ee8d12762dde6_32589080 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_10512116735ee694e54de4a9_85141015',
+    0 => 'Block_2235654895ee8d12762dde6_32589080',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -96,7 +96,7 @@ rankingload" class="button primary">Ranking</a>
                             <img src="images/forest.png" alt="" />
                     </span>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-location">
+map1">
                             <h2>Las</h2>
                             <div class="content">
                                     <p>Tutaj znajdują się potwory od 1 lvl do 5 lvl</p>	
@@ -108,7 +108,7 @@ location">
                             <img src="images/pustynia.png" alt="" />
                     </span>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-location">
+map2">
                             <h2>Pustynia</h2>
                             <div class="content">
                                     <p>Tutaj znajdują się potwory od 6 lvl do 10 lvl</p>
@@ -120,7 +120,7 @@ location">
                             <img src="images/bagno.png" alt="" />
                     </span>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-location">
+map3">
                             <h2>Bagna</h2>
                             <div class="content">
                                     <p>Tutaj znajdują się potwory od 11 lvl do 15 lvl</p>

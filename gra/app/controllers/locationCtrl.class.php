@@ -21,7 +21,8 @@ class locationCtrl {
     public $login;    
     public $accountData; 
     public $monsterData;
-    private $idmonster;
+    public $idmonster;
+    public $idmap;
     
      public function validate() {
         $exists = App::getDB()->count("user","login",[
@@ -76,7 +77,7 @@ class locationCtrl {
 
 
         }catch(\PDOException $e){
-            Utils::addErrorMessage("Błąd połączenia z bazą danych!");
+            Utils::addErrorMessage("Błąd połączenia z bazą dany ch!");
         }
 
         return $monster;
@@ -85,11 +86,12 @@ class locationCtrl {
     
      public function generateView(){
         $this->idmonster = SessionUtils::load($this->idmonster, $keep = true);
+        Utils::addErrorMessage($this->idmonster);
         $this->accountData = $this->getUserDB($this->login);
         $this->monsterData = $this->getMonsterDB();
         
         App::getSmarty()->assign("player", $this->accountData);
-        App::getSmarty()->assign("monster", $this->monsterData);
+        App::getSmarty()->assign("monster", $this->monsterData);;
         App::getSmarty()->display('locationView.tpl');
     }
     
