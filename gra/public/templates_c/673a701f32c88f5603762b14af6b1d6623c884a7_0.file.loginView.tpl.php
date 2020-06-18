@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-12 12:22:50
+/* Smarty version 3.1.34-dev-7, created on 2020-06-18 16:19:36
   from 'C:\xampp\htdocs\gra\app\views\loginView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ee3577a2d1455_04226838',
+  'unifunc' => 'content_5eeb77f89a07e0_45341000',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '673a701f32c88f5603762b14af6b1d6623c884a7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\gra\\app\\views\\loginView.tpl',
-      1 => 1591956883,
+      1 => 1592390127,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ee3577a2d1455_04226838 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eeb77f89a07e0_45341000 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,22 +28,25 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7970530995ee3577a1e5054_21558557', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_754332255eeb77f898d553_19614447', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_7970530995ee3577a1e5054_21558557 extends Smarty_Internal_Block
+class Block_754332255eeb77f898d553_19614447 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7970530995ee3577a1e5054_21558557',
+    0 => 'Block_754332255eeb77f898d553_19614447',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-
+ <div style="margin: 25px 87%">
+       <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+rankingload" class="button primary">Ranking</a>
+       </div>   
 
 <div style="margin: 120px 43%">
 <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>

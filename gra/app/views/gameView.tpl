@@ -41,7 +41,7 @@
 
     </header>
     
-    <section class="tiles">
+        <section class="tiles">
             <article class="style10">
                     <span class="image">
                             <img src="images/forest.png" alt="" />

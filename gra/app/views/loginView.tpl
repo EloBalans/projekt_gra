@@ -2,7 +2,9 @@
 
 
 {block name=content}
-
+ <div style="margin: 25px 87%">
+       <a href="{$conf->action_root}rankingload" class="button primary">Ranking</a>
+       </div>   
 
 <div style="margin: 120px 43%">
 <form action="{$conf->action_url}login" method="post"  class="pure-form pure-form-aligned bottom-margin">

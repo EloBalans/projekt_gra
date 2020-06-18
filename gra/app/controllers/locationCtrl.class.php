@@ -22,7 +22,7 @@ class locationCtrl {
     public $accountData; 
     public $monsterData;
     public $idmonster;
-    public $idmap;
+    public $location;
     
      public function validate() {
         $exists = App::getDB()->count("user","login",[
@@ -86,10 +86,11 @@ class locationCtrl {
     
      public function generateView(){
         $this->idmonster = SessionUtils::load($this->idmonster, $keep = true);
-        Utils::addErrorMessage($this->idmonster);
         $this->accountData = $this->getUserDB($this->login);
         $this->monsterData = $this->getMonsterDB();
+        $this->location = SessionUtils::load('location', $keep = true);
         
+        App::getSmarty()->assign("location", $this->location);
         App::getSmarty()->assign("player", $this->accountData);
         App::getSmarty()->assign("monster", $this->monsterData);;
         App::getSmarty()->display('locationView.tpl');

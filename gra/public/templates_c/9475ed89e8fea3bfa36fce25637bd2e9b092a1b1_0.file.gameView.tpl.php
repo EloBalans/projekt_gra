@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-16 16:03:19
+/* Smarty version 3.1.34-dev-7, created on 2020-06-16 20:35:48
   from 'C:\xampp\htdocs\gra\app\views\gameView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ee8d12763f306_65562686',
+  'unifunc' => 'content_5ee91104552c81_75761775',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9475ed89e8fea3bfa36fce25637bd2e9b092a1b1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\gra\\app\\views\\gameView.tpl',
-      1 => 1592316195,
+      1 => 1592332546,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ee8d12763f306_65562686 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ee91104552c81_75761775 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2235654895ee8d12762dde6_32589080', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6718074225ee9110453fd56_61707836', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_2235654895ee8d12762dde6_32589080 extends Smarty_Internal_Block
+class Block_6718074225ee9110453fd56_61707836 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2235654895ee8d12762dde6_32589080',
+    0 => 'Block_6718074225ee9110453fd56_61707836',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -90,7 +90,7 @@ rankingload" class="button primary">Ranking</a>
 
     </header>
     
-    <section class="tiles">
+        <section class="tiles">
             <article class="style10">
                     <span class="image">
                             <img src="images/forest.png" alt="" />

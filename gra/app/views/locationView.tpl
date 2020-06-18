@@ -4,8 +4,10 @@
 <div style="margin: 25px 90%">
     <a href="{$conf->action_root}gameview" class="button primary">Back</a>
 </div>
-
-<header> 
+<div style="margin: 25px 47%">
+    <h1>{$location}</h1>
+</div>
+<header>    
 </header>
    
 <div class="table-wrapper">      
@@ -51,7 +53,7 @@
         </ul>
     </div>
 {/if}   
-    <div style="margin: 25px 40%">
+    <div style="margin: 25px 45%">
         <a href="{$conf->action_root}locationfight" class="button primary">Walka</a>
     </div>
     

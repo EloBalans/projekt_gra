@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-06-16 19:58:43
+/* Smarty version 3.1.34-dev-7, created on 2020-06-18 13:08:05
   from 'C:\xampp\htdocs\gra\app\views\locationfightView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ee90853654db9_11788122',
+  'unifunc' => 'content_5eeb4b1540db26_97038396',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '665549d74665be6ed1bca4024a00e49db07443cc' => 
     array (
       0 => 'C:\\xampp\\htdocs\\gra\\app\\views\\locationfightView.tpl',
-      1 => 1592330322,
+      1 => 1592478477,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ee90853654db9_11788122 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eeb4b1540db26_97038396 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2867352715ee90853624ec9_43432917', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2185138045eeb4b153c2069_55547019', 'content');
 ?>
  <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_2867352715ee90853624ec9_43432917 extends Smarty_Internal_Block
+class Block_2185138045eeb4b153c2069_55547019 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2867352715ee90853624ec9_43432917',
+    0 => 'Block_2185138045eeb4b153c2069_55547019',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -46,6 +46,10 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 <div style="margin: 25px 90%">
     <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 gameview" class="button primary">Back</a>
+</div>
+<div style="margin: 25px 47%">
+    <h1><?php echo $_smarty_tpl->tpl_vars['location']->value;?>
+</h1>
 </div>
     
 <header>                   
@@ -98,21 +102,39 @@ gameview" class="button primary">Back</a>
 <div class="table-wrapper">
     <table class="alt">
             
-            <tbody>
-                    <tr>
-                            <td>HP: <?php echo $_smarty_tpl->tpl_vars['player']->value["hp"];?>
+        <tbody>
+            <tr>
+                <td>HP: <?php echo $_smarty_tpl->tpl_vars['player']->value["hp"];?>
 </td>
-                            <td>AT: <?php echo $_smarty_tpl->tpl_vars['player']->value["attack"];?>
+                <td>AT: <?php echo $_smarty_tpl->tpl_vars['player']->value["attack"];?>
 </td>
-                            <td><center>----------------------------------WALKA----------------------------------</center></td>
-                            <td>HP: <?php echo $_smarty_tpl->tpl_vars['monster']->value["hp"];?>
+                <td><center>----------------------------------WALKA----------------------------------</center></td>
+                <td>HP: <?php echo $_smarty_tpl->tpl_vars['monster']->value["hp"];?>
 </td>
-                            <td>AT: <?php echo $_smarty_tpl->tpl_vars['monster']->value["attack"];?>
+                <td>AT: <?php echo $_smarty_tpl->tpl_vars['monster']->value["attack"];?>
 </td>
-                    </tr>
+            </tr>
+            
+              
+                <tr>   
+                    <td>HP: <?php echo $_smarty_tpl->tpl_vars['hp_user']->value;?>
+</td>
+                    <td>AT: <?php echo $_smarty_tpl->tpl_vars['at_user']->value;?>
+</td>
+                    <td><center> <?php echo $_smarty_tpl->tpl_vars['player']->value["nick"];?>
+ [AT<?php echo $_smarty_tpl->tpl_vars['at_user']->value;?>
+] -> <?php echo $_smarty_tpl->tpl_vars['monster']->value["name"];?>
+ [HP - <?php echo $_smarty_tpl->tpl_vars['at_user']->value;?>
+]</center></td>
+                    <td>HP: <?php echo $_smarty_tpl->tpl_vars['hp_monster']->value;?>
+</td>
+                    <td>AT: <?php echo $_smarty_tpl->tpl_vars['at_monster']->value;?>
+</td>
+                </tr>
+           
+          
                     
-                    
-            </body>       
+        </body>       
     </table>
 </div>
                       
@@ -135,10 +157,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 <?php }?>                                                            
 
-<div style="margin: 25px 43%">
-    <h1> Wygrana! </h1>
+<div style="margin: 25px 42%">
+    <h1> <?php echo $_smarty_tpl->tpl_vars['result']->value;?>
+ </h1>
     </div>
-<div style="margin: 25px 47%">
+<div style="margin: 25px 45%">
     
     <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 looplocation" class="button primary">Dalej</a>
