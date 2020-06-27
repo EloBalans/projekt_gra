@@ -98,78 +98,78 @@ class locationfightCtrl {
              $this->userhp = App::getDB()->sum("user",['hp',],['login' => $login]);
              $this->userat = App::getDB()->sum("user",['attack',],['login' => $login]);
              
-            if($this->userexp >= 0 & $this->userexp <44 ){
+            if($this->userexp >= 0 & $this->userexp <50 ){
                 App::getDB()->update("user" ,['lvl' => 1],['login' => $login]);
                 
                 
             }
-            if($this->userexp >= 44 & $this->userexp <99 ){
+            if($this->userexp >= 50 & $this->userexp <100 ){
                 App::getDB()->update("user" ,['lvl' => 2],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 25],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 5],['login' => $login]);
             }
-            if($this->userexp >= 99 & $this->userexp <176 ){
+            if($this->userexp >= 100 & $this->userexp <150 ){
                 App::getDB()->update("user" ,['lvl' => 3],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 30],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 6],['login' => $login]);
             }
-            if($this->userexp >= 176 & $this->userexp <275 ){
+            if($this->userexp >= 150 & $this->userexp <250 ){
                 App::getDB()->update("user" ,['lvl' => 4],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 35],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 7],['login' => $login]);
             }
-            if($this->userexp >= 275 & $this->userexp <396 ){
+            if($this->userexp >= 250 & $this->userexp <400 ){
                 App::getDB()->update("user" ,['lvl' => 5],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 40],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 8],['login' => $login]);
                 
             }
-            if($this->userexp >= 396 & $this->userexp <539 ){
+            if($this->userexp >= 400 & $this->userexp <500 ){
                 App::getDB()->update("user" ,['lvl' => 6],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 45],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 9],['login' => $login]);
             }
-            if($this->userexp >= 539 & $this->userexp <704 ){
+            if($this->userexp >= 500 & $this->userexp <700 ){
                 App::getDB()->update("user" ,['lvl' => 7],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 50],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 10],['login' => $login]);
             }
-            if($this->userexp >= 704 & $this->userexp <891 ){
+            if($this->userexp >= 700 & $this->userexp <1000 ){
                 App::getDB()->update("user" ,['lvl' => 8],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 55],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 11],['login' => $login]);
             } 
-            if($this->userexp >= 891 & $this->userexp <1000 ){
+            if($this->userexp >= 1000 & $this->userexp <3000 ){
                 App::getDB()->update("user" ,['lvl' => 9],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 60],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 12],['login' => $login]);
             }
-            if($this->userexp >= 1000 & $this->userexp <1210 ){
+            if($this->userexp >= 3000 & $this->userexp <6000 ){
                 App::getDB()->update("user" ,['lvl' => 10],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 65],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 13],['login' => $login]);
             }
-            if($this->userexp >= 1210 & $this->userexp <1440 ){
+            if($this->userexp >= 6000 & $this->userexp <9000){
                 App::getDB()->update("user" ,['lvl' => 11],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 70],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 14],['login' => $login]);
             }
-            if($this->userexp >= 1440 & $this->userexp <1690 ){
+            if($this->userexp >= 9000 & $this->userexp <12000 ){
                 App::getDB()->update("user" ,['lvl' => 12],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 75],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 15],['login' => $login]);
             }
-            if($this->userexp >= 1690 & $this->userexp <1960 ){
+            if($this->userexp >= 12000 & $this->userexp < 17000){
                 App::getDB()->update("user" ,['lvl' => 13],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 80],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 16],['login' => $login]);
             }
-            if($this->userexp >= 1960 & $this->userexp <2250 ){
+            if($this->userexp >= 17000 & $this->userexp <23000 ){
                 App::getDB()->update("user" ,['lvl' => 14],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 85],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 17],['login' => $login]);
             }
-            if($this->userexp >= 2250){
+            if($this->userexp >= 23000){
                 App::getDB()->update("user" ,['lvl' => 15],['login' => $login]);
                 App::getDB()->update("user" ,['hp' => 90],['login' => $login]);
                 App::getDB()->update("user" ,['attack' => 18],['login' => $login]);
@@ -190,9 +190,9 @@ class locationfightCtrl {
         $hp_user = null;
 
         try{
-            $this->at_monster = App::getDB()->sum("monster",['attack',],['idmonster' => $this->idmonster,]);
+            $this->at_monster = App::getDB()->sum("monster",['attack',],['idmonster' => $this->idmonster,])+(rand (-2,2));
             $this->hp_monster = App::getDB()->sum("monster",['monster.hp',],['idmonster' => $this->idmonster,]);
-            $this->at_user = App::getDB()->sum("user",['attack',],['login' => $login]);
+            $this->at_user = App::getDB()->sum("user",['attack',],['login' => $login])+(rand (-2,2));
             $this->hp_user = App::getDB()->sum("user",['hp',],['login' => $login]);
             
             

@@ -49,12 +49,11 @@ class rankingCtrl {
         }
         
         
-        $where ["ORDER"] = "nick";
+        
+        
+        $where ["ORDER"] =["lvl"=> "DESC"];
        
       
-        
-           
-        
         
         
        try {
@@ -64,7 +63,7 @@ class rankingCtrl {
                 "nick",
                 "iduser",
                 "lvl",
-                ], ['LIMIT' => 20],$where );
+                ],$where );
         } catch (\PDOException $e) {
             Utils::addErrorMessage('Wystąpił błąd podczas pobierania rekordów');
             if (App::getConf()->debug)

@@ -55,7 +55,7 @@
                 <td>AT: {$monster["attack"]}</td>
             </tr>
             
-              
+            
                 <tr>   
                     <td>HP: {$hp_user}</td>
                     <td>AT: {$at_user}</td>
@@ -63,7 +63,7 @@
                     <td>HP: {$hp_monster}</td>
                     <td>AT: {$at_monster}</td>
                 </tr>
-           
+          
           
                     
         </body>       

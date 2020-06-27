@@ -24,7 +24,6 @@
 <div class="bottom-margin">
     
     <form class="pure-form pure-form-stacked" action="{$conf->action_url}rankingload">
-	<legend>Opcje wyszukiwania</legend>
 	<fieldset>
 		<input type="text" placeholder="nick" name="nick" value="{$searchnickForm->nick}" /><br />
 		<button type="submit" class="pure-button pure-button-primary">Szukaj gracza</button>
